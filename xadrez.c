@@ -76,5 +76,36 @@ int main() {
         } while (i < rainha_passos);
     }
 
+    /* --- Cavalo (movimenta-se em L) --------------------------------------- */
+    /* Nível Intermediário - Movimento do Cavalo
+       O Cavalo se move em uma trajetória em forma de "L": 2 casas em uma direção
+       (vertical ou horizontal) e depois 1 casa perpendicular.
+       
+       Para este desafio, o Cavalo se moverá 2 casas para baixo e 1 casa para
+       a esquerda, utilizando loops aninhados (1 for + 1 while). */
+    printf("\n"); /* Linha em branco para separar o movimento do Cavalo */
+    printf("Cavalo: movendo em L (2 casas baixo, 1 casa esquerda)\n");
+
+    int cavalo_baixo = 2;      /* Número de casas para baixo */
+    int cavalo_esquerda = 1;   /* Número de casas para esquerda */
+    int j;                     /* Contador secundário para o loop interno */
+
+    /* Loop externo (for) - controla o ciclo completo do movimento do Cavalo */
+    for (i = 0; i < 1; i++) {
+        /* Loop interno 1 (while) - movimenta o Cavalo para BAIXO */
+        j = 0;
+        while (j < cavalo_baixo) {
+            printf("Baixo\n");
+            j++;
+        }
+
+        /* Loop interno 2 (while) - movimenta o Cavalo para ESQUERDA */
+        j = 0;
+        while (j < cavalo_esquerda) {
+            printf("Esquerda\n");
+            j++;
+        }
+    }
+
     return 0;
 }
